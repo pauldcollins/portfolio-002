@@ -1,0 +1,239 @@
+/**
+ * This is the main application stylesheet. It should include or import all
+ * stylesheets used throughout the application as this is the only stylesheet in
+ * the Grunt configuration that is automatically processed.
+ */
+
+
+/**
+ * First, we include the Twitter Bootstrap LESS files. Only the ones used in the
+ * project should be imported as the rest are just wasting space.
+ */
+
+@import '../../vendor/bootstrap/less/bootstrap.less';
+
+
+/**
+ * This is our main variables file. We must include it last so we can overwrite any variable
+ * definitions in our imported stylesheets.
+ */
+
+@import 'variables.less';
+@import 'sections.less';
+
+/**
+ * Typography
+ */
+
+@font-face {
+  font-family: 'arial';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Roboto Regular'), local('Roboto-Regular'), url(fonts/Roboto-Regular.woff) format('woff');
+}
+
+@font-face {
+    font-family: 'featured_itemregular';
+    src: url('fonts/featureditem-webfont.eot');
+    src: url('fonts/featureditem-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/featureditem-webfont.woff2') format('woff2'),
+         url('fonts/featureditem-webfont.woff') format('woff'),
+         url('fonts/featureditem-webfont.ttf') format('truetype'),
+         url('fonts/featureditem-webfont.svg#featured_itemregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+code, pre, .pre {
+  padding: 5px;
+  margin: 10px 0;
+  background-color: #EFEFEF;
+  border: 1px solid #DADADA;
+  border-radius: 3px;
+}
+
+code {
+  padding: 0 3px;
+}
+
+pre {
+  margin: 10px 0;
+  padding: 5px;
+}
+
+.page-header {
+  margin-top: 60px;
+
+  &:first-child {
+    margin-top: 20px;
+  }
+}
+
+h1 {
+    color: @white;
+}
+
+h2 {
+  margin: 20px 0;
+  color: #666;
+
+  a {
+    color: inherit;
+
+    &:hover {
+        text-decoration: none;
+        color: black;
+    }
+  }
+}
+
+a {
+    color: @red;
+
+    &:hover {
+        color: @red;
+    }
+}
+
+html, body {
+	height: 100%;
+    color: #666;
+}
+
+/**
+ * Navigation
+ */
+
+.navbar {
+  z-index: 10000;
+  width: 100%;
+
+  	.navbar-brand {
+  		padding: 8px 15px 15px;
+  	}
+}
+
+@media (min-width: @screen-lg-min) {
+	.navbar {
+	  width: 100%;
+	}
+}
+/**
+ * Containers
+ */
+.main-container {
+	padding: 0;
+	width: 100%;
+}
+
+.title-area {
+    padding: 50px 0;
+    background: lighten(@light-green, 0%);
+    text-align: center;
+    overflow: visible;
+
+    &:after {
+        width: 0; 
+        height: 0; 
+        border-left: 20px solid transparent;
+        border-right: 20px solid transparent;        
+        border-top: 20px solid @light-green;
+        position: absolute;
+        bottom: -20px;
+        z-index: 1;
+        left: 49%;
+    } 
+
+    .text {
+        text-align: center;
+    }   
+
+    @media (min-width: 768px) {
+        h1 {
+          font-size: 70px;
+        }
+    }    
+}
+
+.left-image {
+
+    .container {
+        display: table;
+    }
+
+    .image {
+        padding: 5px;
+        border: solid 1px lighten(@lightgrey, 35%);
+        display: table-cell;
+        float: none; 
+
+        &:hover {
+            background: lighten(@lightgrey, 35%);          
+        }       
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .text-area {
+        text-align: left; 
+        display: table-cell;
+        vertical-align: middle;
+        float: none;
+
+        p:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
+
+/**
+ * Footer
+ */
+
+footer {
+    width: 100%;
+    padding: 50px 0;
+
+    h1 {
+        float: left;
+        margin: 0;
+    }
+
+    .social {
+        float: left;
+        margin: 7px 0 0 10px;
+        list-style: none;
+        padding: 0;
+    
+        li {
+            float: left;
+            margin-left: 20px;
+
+            a, a:visited {
+                color: @white;
+                text-decoration: none;
+                font-size: @font-size-h4;
+                
+                .transition( 250ms ease-in-out );
+
+                &:hover {
+                  color: @gray;
+                }
+            }
+        }
+    }
+}
+
+
+/**
+ * Now that all app-wide styles have been applied, we can load the styles for
+ * all the submodules and components we are using. 
+ *
+ * TODO: In a later version of this boilerplate, I'd like to automate this.
+ */
+
+@import '../app/home/home.less';
+

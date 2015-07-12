@@ -1,0 +1,88 @@
+.jumbotron {
+    margin: 0;
+    text-align: center;
+    background: url(images/main-banner.jpg) center center/cover no-repeat;
+    height: 100%;
+
+    @media (min-width: @screen-lg-min) {
+	    .navbar {
+	        width: 100%;
+	    }
+    }  
+
+    a {
+        color: @white;
+        border-bottom: solid 1px fade(@white, 40%);
+        display: inline-block;;
+
+        &:hover {
+            text-decoration: none;
+            border-bottom: solid 1px fade(@white, 70%);
+        }
+    }
+
+    h1 a {
+        border-bottom: none;
+
+        &:hover {
+            border-bottom: none;
+            opacity: 0.6;
+
+            &:before{
+                content: "Contact: ";
+            }
+        }
+    }
+
+  	.lead {
+    	font-size: 24px;
+    	line-height: 1.25;      
+  	}
+
+    ul.links {
+        list-style: none;
+        margin: 0 auto;
+        padding: 0;
+        width: auto;
+
+        li {
+            margin: 0;
+            display: inline-block;
+            font-size: @font-size-h3;
+            padding: 0 7px;
+
+            i {
+                font-size: @font-size-h4;
+                opacity: 0.4;
+            }
+        }
+    }
+
+  	.btn {
+    	font-size: 21px;
+    	padding: 14px 24px;
+  	}
+}
+
+.marketing {
+  	.row {
+    	margin-bottom: 10px;
+  	}
+
+  	.row:last-child {
+    	margin-bottom: 0;
+  	}
+  
+  	h4 [class*=" icon-"], h4 [class^="icon-"] {
+    	margin-right: 5px;
+    	vertical-align: -10%;
+    	font-size: 28px;
+    	line-height: 1;
+  	}
+}
+
+@media (min-width: @screen-sm-min) {
+	.jumbotron h1 {
+        font-size: 105px !important;
+  	}	
+} 

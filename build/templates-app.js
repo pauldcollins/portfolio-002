@@ -275,13 +275,23 @@ angular.module("home/home.tpl.html", []).run(["$templateCache", function($templa
     "\n" +
     "<div class=\"section-container\">\n" +
     "\n" +
-    "\n" +
     "<!--FRONT END DEVELOPMENT-->\n" +
     "	<section id=\"front-end-development\" class=\"title-area\">\n" +
     "		<div class=\"container column text\">\n" +
     "			<h1>Front End Development</h1>\n" +
     "		</div>\n" +
     "	</section>\n" +
+    "<!--project-->\n" +
+    "	<section class=\"image\">	\n" +
+    "		<div class=\"container\">						\n" +
+    "			<div class=\"col-md-12 text-area\">\n" +
+    "				<h2 class=\"mainTitle\"><a href=\"http://www.medibank.com.au/about\" target=\"_blank\">Tranport ordering system</a></h2>\n" +
+    "				<p><strong>(Subject to NDA)</strong></p>\n" +
+    "				<p>Lead <strong>Angular</strong> developer on 5 month project, build of complete ordering system on JAVA platform. Setup of user roles and authentication, real time push notifications using <strong>Atmosphere JS</strong>, connecting to web services via a <strong>JSON RESTful API</strong>.</p>\n" +
+    "				<p>Other tech used: <strong>HTML, CSS, Grunt, Require.js, Bootstrap, Kendo, Node, Bower</strong>. </p>\n" +
+    "			</div>			\n" +
+    "		</div>				\n" +
+    "	</section>	\n" +
     "<!--project-->\n" +
     "	<section class=\"image left-image\">	\n" +
     "		<div class=\"container\">				\n" +
